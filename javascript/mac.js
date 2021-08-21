@@ -35,7 +35,7 @@ function calculation() {
     salesValue.innerText = totalAmount;
 
 
-    //condition of promocode "stevekaku" none case sensetive
+    //condition of promocode "stevekaku" is add case-sensitive .toLowerCase
     // --------------------------------------------------------------
     const promoCodeInputField = document.getElementById('promo-input');
     const promoAmount = document.getElementById('promo-value');
