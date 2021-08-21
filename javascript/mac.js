@@ -1,7 +1,7 @@
 
 // external service cost calculation by button
 // ---------------------------------------------------------------------
-function memoryButton(expenseId, isAdd, amount) {
+function priceVerifi(expenseId, isAdd, amount) {
 
     const costOfAmount = document.getElementById(expenseId);
     let externalProductCost = '0';
