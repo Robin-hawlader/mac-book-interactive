@@ -29,10 +29,7 @@ function calculation() {
     const bestPrice = document.getElementById('best-price').innerText;
 
 
-    const promoInput = document.getElementById('promo-input');
     const salesValue = document.getElementById('sales-value');
-    const promoValue = document.getElementById('promo-value');
-
 
     const totalAmount = parseFloat(memoryPuschaseAmount) + parseFloat(storagePurchaseAmount) + parseFloat(deliveryCost) + parseFloat(bestPrice);
     salesValue.innerText = totalAmount;
@@ -40,17 +37,20 @@ function calculation() {
 
     //condition of promocode "stevekaku" none case sensetive
     // --------------------------------------------------------------
+    const promoCodeInputField = document.getElementById('promo-input');
+    const promoAmount = document.getElementById('promo-value');
+
     const promoCode = 'stevekaku';
     const promoCodeCase = promoCode.toLowerCase();
-    if (promoInput.value.toLowerCase() == promoCodeCase) {
+    if (promoCodeInputField.value.toLowerCase() == promoCodeCase) {
         const discount = totalAmount * .2;
-        promoValue.innerText = totalAmount - discount;
+        promoAmount.innerText = totalAmount - discount;
 
         // clear input Field
-        promoInput.value = '';
+        promoCodeInputField.value = '';
     }
     else {
-        promoValue.innerText = totalAmount;
+        promoAmount.innerText = totalAmount;
     }
 
 
