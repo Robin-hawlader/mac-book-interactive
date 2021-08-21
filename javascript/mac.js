@@ -40,7 +40,9 @@ function calculation() {
 
     //condition of promocode "stevekaku" none case sensetive
     // --------------------------------------------------------------
-    if (promoInput.value == 'stevekaku') {
+    const promoCode = 'stevekaku';
+    const promoCodeCase = promoCode.toLowerCase();
+    if (promoInput.value.toLowerCase() == promoCodeCase) {
         const discount = totalAmount * .2;
         promoValue.innerText = totalAmount - discount;
 
